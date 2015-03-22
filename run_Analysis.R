@@ -27,7 +27,7 @@ run_analysis <- function () {
   features <- read.table("features.txt")
     
   ## Find the position with the measurements with "mean()" or std() in the name
-  meanstdpositions <- grep("mean\\()|std\\()",features[,2])
+  meanstdpositions <- grep("mean\\(\\)|std\\(\\)",features[,2])
   
   ## Reduce combinedX dataset to have only mean() and std() variables
   combinedX <- combinedX[,meanstdpositions]
